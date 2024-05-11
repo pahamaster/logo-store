@@ -1,0 +1,35 @@
+$containerWidth: 1140px;
+$baseFontSize: 12px;
+
+//breakpoints
+$tablets: 768px;
+$phones: 480px;
+$md1: 1000px;
+
+//colors
+$red: #f68038;
+$gray: #f5f5f5;
+$color_p: #666666;
+
+//z-indexes
+
+$z-fixed-menu: 100;
+
+@import "media.scss";
+
+//setups
+@import url("https://fonts.googleapis.com/css?family=Play:300,400,400i,700&display=swap&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic");
+@font-face {
+  font-family: "UniSans";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/unisansheavycaps.woff2") format("woff2"),
+       url("../fonts/unisansheavycaps.woff") format("woff"),
+       url("../fonts/unisansheavycaps.ttf") format("ttf");
+}
+@import "layout.scss";
+
+//components
+@import "./blocks/*.scss";

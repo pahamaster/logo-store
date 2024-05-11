@@ -1,0 +1,78 @@
+.about{
+  // &-section{
+  //   position: relative;
+  // }
+  &__container{
+    padding: rem(36px) rem(53px) rem(60px) rem(34px); 
+    @include tablets{
+      padding-bottom: 5%;
+    }
+    //height: rem(712px);
+    background: url("./img/background_about.jpg") ;
+    //position: relative;
+    // &:before{
+    //   position: absolute;
+    //   content: url("./img/girl1.png");
+    //   //content: "";
+    //   top: 72%;
+    //   left: 77%;
+    //   //background-image: url("./img/girl1.png");
+    //   width: 25%;
+    //   height: 25%;
+    //   //background-size: cover;
+    //   //z-index: 5;
+    // }
+  }
+  &__header{
+    color: #22b7ca;
+    font-size: rem(30px);
+    font-weight: 900;
+    font-family: UniSans;
+    margin-bottom: 1.8%;
+    margin-left: -5px;
+    letter-spacing: 1px;
+  }
+  &__content{
+    display: flex; 
+    letter-spacing: .3px;
+    @include tablets{
+      flex-direction: column;
+    }
+  }
+  &__column{
+    flex: 0 1 48%;
+    line-height: 173%;
+    &-right{
+      flex: 0 1 45.4%;
+      @include tablets{
+        margin-top: 3%;
+      }
+    }
+    &>h4{
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  &__column-space{
+    flex: 0 1 5.88%;
+  }
+  &__list{
+    &>li{
+      text-indent: 3em;
+      background: url("./img/about_bullet.png") 0.5em 0.4em no-repeat;
+    }
+  }
+}
+
+.container__about{
+  position: relative;
+}
+
+.girl-about{
+    position: absolute;
+    //top: 94%;
+    left: 78%;
+    transform: translate(0px, -64%);
+}
+

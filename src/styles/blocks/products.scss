@@ -1,0 +1,654 @@
+.products{
+  // margin-top: 7%;
+  margin-top: 18px;
+  // @include tablets{
+  //   margin-top: 14%;
+  // }
+}
+
+.content-products{
+  display: flex;
+  &__slide{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: fit-content;
+    @media (max-width: 1150px)
+    {
+      justify-content: space-around;
+    }
+    @include md1{
+      justify-content: space-evenly;
+    }
+    width: 100%;
+    // &.--oneslide{
+    //   width: 100%;
+    // }
+  }
+  
+  //margin-bottom: 1%;
+  //height: rem(820px);
+  &__item{
+    width: rem(262px);
+    height: rem(382px);
+    //border: 1px solid #dadada;
+    margin-bottom: 3.3%;
+  }
+  
+}
+
+.header-products{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.6%;
+  &__caption{
+    font-size: rem(30px);
+    @include phones{
+      font-size: rem(24px);
+    }
+    font-weight: 900;
+    font-family: UniSans;
+    color: #dadada;
+    letter-spacing: 1px;
+    &_popular{
+      font-size: rem(36px);
+      @include tablets{
+        font-size: rem(30px);
+      }
+      @include phones{
+        font-size: rem(24px);
+      }
+    }
+  }
+}
+
+.breadcrumbs{
+  margin-top: rem(32px);
+  &__list{
+    display: flex;
+  }
+  &__item{
+    font-size: 14px;
+    padding-right: rem(30px);
+    margin-right: rem(10px);
+    background: url(./img/about_bullet.png) top 3px right 5% no-repeat;
+    &:last-child{
+      background: none; 
+    }
+  }
+  &__link{
+    text-decoration: underline;
+    color: #1ab9ce;
+  }
+  &__span{
+    color: #999999;
+  }
+}
+
+.sort{
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: rem(50px);
+  &__title{
+    color: black;
+    line-height: 28px;
+    font-weight: 900;
+  }
+  &__item{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: rem(14px);
+  }
+  &__method{
+    width: rem(335px);
+  }
+  &__showing{
+    width: rem(110px);
+  }
+}
+
+.showing-sort{
+  &__brush{
+      fill: #a6a6a6;
+    }
+    &__background{
+      fill: #fff;
+    }
+  &__icon{
+    vertical-align: middle;
+    display: inline-block;
+    height: rem(34px);
+    width: rem(36px);
+  }
+  &__item{
+    cursor: pointer;
+    &.--active .showing-sort{
+      &__brush{
+        fill: #fff;
+      }
+      &__background{
+        fill: #4da0b9;
+      }
+    }
+  }
+}
+
+.controls-products{
+  //position: relative;
+  display: flex;
+  width: rem(164px);
+  justify-content: space-between;
+  align-items: center;
+  &__label{
+    color: #999999;
+    font-size: rem(16px);
+    white-space: nowrap;
+    span{
+      color: black;
+      font-size: rem(30px);
+      @include phones{
+        font-size: rem(22px);
+      }
+      font-weight: 900;
+    }
+  }
+  &__icon{
+    vertical-align: middle;
+    display: inline-block;
+    height: 36px;
+    width: 41px;
+    stroke: #009cb0;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  &__right-icon{
+    transform: rotate(180deg);
+  }
+  &__arrow:hover{
+    >svg{
+      stroke: #fd8424;
+    }
+  }
+}
+
+.paggin-products{
+  margin: 15px 0 20px;
+  height: rem(50px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  &__title{
+    font-size: rem(14px);
+    color: black;
+    line-height: 13px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    //white-space: nowrap;
+  }
+  &__count{
+    // width: rem(195px);
+    width: 15.05rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__controls{
+    flex: 0 1 47%;
+  }
+}
+
+.controls-paggin{
+  //position: relative;
+  display: flex;
+  //width: rem(164px);
+  justify-content: space-evenly;
+  align-items: center;
+  &__list{
+    display: flex;
+    justify-content: space-evenly;
+    flex: 0 1 73%;
+  }
+  &__item{
+    color: black;
+    height: rem(35px);
+    width: rem(35px);
+    @include phones{
+      height: rem(25px);
+      width: rem(25px);
+    }
+    font-size: rem(18px);
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &.--active{
+      cursor: default;
+      color: white;
+      border-radius: 50%;
+      background-color: #fd8424;
+    }
+  }
+  &__icon{
+    vertical-align: middle;
+    display: inline-block;
+    height: rem(36px);
+    width: rem(41px);
+    stroke: #e7e7e7;
+    stroke-width: 3;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  &__right-icon{
+    transform: rotate(180deg);
+  }
+  &__arrow{
+    cursor: default;
+  }
+  &__arrow.--active{
+    >svg{
+      stroke: #009cb0;
+    }
+    &:hover>svg{
+      cursor: pointer;
+      stroke: #fd8424;
+    }
+  }
+}
+
+.product{
+  width: rem(214px);
+  height: rem(360px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__image{
+    padding-top: 16%;
+    @include tablets{
+      padding-top: 14%;
+    }
+    @include phones{
+      padding-top: 8%;
+    }
+  }
+  &__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #dadada;
+    overflow: hidden;
+    &>.product-info__wrapper{
+      // transition: background-color 1s;
+      // background-color: rgba(0, 0, 0, 0);
+      //transform: translate(0, 0);
+    }
+    &:hover{
+      border: 5px solid #f68038;
+      &>.product-info__wrapper{
+
+        //display: flex;
+        //transition: background-color 2s 2s;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      &>.product-info__wrapper>.product-info{
+        //transition: background-color 2s 2s;
+        //background-color: rgba(0, 0, 0, 0.8);
+        transform: translate(0px, 0px);
+      }
+      .product__caption{
+        display: none;
+      }
+      .product__footer{
+        display: none;
+      }
+    }
+  }
+  &__caption{
+    color: #36949f;
+    font-size: rem(16px);
+  }
+  &__model{
+    font-weight: 900;
+  }
+  &__title{
+    font-weight: 300;
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__price{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    white-space: nowrap;
+    &-old{
+      color: #999999;
+      font-size: rem(18px);
+      font-weight: 300;
+      text-decoration: line-through;
+      //float: right;
+      text-align: right;
+    }
+    &-new{
+      color: black;
+      font-size: rem(24px);
+      font-weight: 900;
+    }
+  }
+  &__incart{
+    align-self: flex-end;
+  }
+}
+
+.product-info{
+  // width: rem(214px);
+  // height: rem(360px);
+  width: 19.833rem;
+  height: 28rem;
+  &_catalog{
+    height: 28.8rem;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translate(-110%, 0px);
+  transition: transform .5s;
+  //position: absolute;
+  &__discount{
+    display: none;
+  }
+  &__image-wrapper{
+    display: none;
+  }
+  // &__image{
+  //   display: none;
+  // }
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 1s;
+    position: absolute;
+    display: flex;
+    //display: none;
+    justify-content: center;
+    //text-align: center;
+    //align-content: center;
+    align-items: center;
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    margin-left: 6%;
+    &_catalog{
+      height: 70%;
+    }
+  }
+  &__header{
+    font-size: rem(16px);
+    //margin-left: 6%;
+    &_catalog{
+      margin-top: rem(5px);
+    }
+  }
+  &__model{
+    font-weight: 900;
+  }
+  &__title{
+    font-weight: 300;
+    color: #c2c2c2;
+  }
+  &__parameters{
+    //margin-left: 6%;
+    &_catalog{
+      //margin-top: -16px;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: rem(14px);
+    height: rem(122px);
+  }
+  &__property-value{
+    color: #f68038;
+    font-weight: 900;
+  }
+  &__compare{
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    //padding-left: rem(30px);
+    //margin-top: -21px;
+    //margin-left: 8%;
+    position: relative;
+    display: flex;
+    //align-items: center;
+    &>span{
+      margin-left: rem(11px);
+      font-size: rem(14px);
+      //border-bottom: 1px dashed white; 
+    }
+    &::before{
+      content: url(./img/compare_white.png);
+      //position: absolute;
+      //left: 0;
+    }
+  }
+  &__incart{
+    align-self: center;
+    border: 2px solid transparent;
+    //background-color: #fd8424;
+    border-radius: 50%;
+    &_catalog{
+      margin-left: 6%;
+    }
+    &:hover{
+      border: 2px solid #fd8424;
+    }
+  }
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+    &_catalog{
+      width: 98%;
+    }
+  }
+  &__price{
+    &_catalog{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+    &-old{
+      &_catalog{
+        line-height: 17px;
+      }
+      color: #999999;
+      font-size: rem(18px);
+      font-weight: 300;
+      text-decoration: line-through;
+      //float: right;
+      text-align: right;
+    }
+    &-new{
+      font-size: rem(24px);
+      font-weight: 900;
+      margin-bottom: -8%;
+    }
+  }
+  &__instock{
+    align-self: flex-end;
+    color: #f68038;
+    background-color: white;
+  }
+}
+
+.instock{
+  text-align: center;
+  line-height: rem(21px);
+  width: rem(85px);
+  height: rem(21px);
+  border-radius: 20px;
+}
+
+.content-products__item.--outstock .product-info__instock{
+  visibility: hidden;
+}
+
+.content-products.--list{
+  & .product__wrapper{
+    &:hover{
+      border: 1px solid #dadada;
+      &>.product-info__wrapper{
+        background-color: transparent;
+      }
+    }
+  }
+  & .content-products{
+    &__slide{
+      display: flex;
+      //flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      height: fit-content;
+    }
+    &__item{
+      width: 100%;
+      height: rem(203px);
+      margin-bottom: 2%;
+    }
+  }
+  & .product{
+    display: none;
+  }
+  & .product-info{
+    transform: translate(0px, 0px);
+    flex-direction: row;
+    align-items: center;
+    width: 97%;
+    height: 100%;
+    &__discount{
+      position: absolute;
+      left: 0;
+      top: 7%;
+      height: rem(30px);
+      width: rem(85px);
+      line-height: rem(30px);
+      background-color: #f65738;
+      @include phones{
+        height: rem(20px);
+        width: rem(75px);
+        line-height: rem(20px);
+        background-color: rgba(246, 87, 56, .5);
+        top: 0;
+      }
+      display: block;
+      text-align: center;
+      //align-items: center;
+      //justify-content: center;
+      font-size: rem(14px);
+      font-weight: 900;
+      z-index: 5;
+      &-arrow{
+        position: absolute;
+        height: 100%;
+      }
+      &::before{
+        position: absolute;
+        content: "";
+        width: 0; 
+        height: 0;
+        left: 100%;
+        border-width: rem(15px) 0 rem(15px) rem(15px);
+        border-style: solid;
+        border-color: transparent #f65738;
+        @include phones{
+          border-width: rem(10px) 0 rem(10px) rem(10px);
+          border-color: transparent rgba(246, 87, 56, .5);
+        }
+      }
+    }
+    &__content{
+      margin-left: 0;
+      flex: 0 1 48%;
+      height: 88%;
+    }
+    &__parameters{
+      height: 5.76667rem;
+    }
+    &_catalog{
+
+    }
+    &__header{
+      color: #36949f;
+    }
+    &__title{
+      color: #36949f;
+    }
+    &__image-wrapper{
+      flex: 0 1 30%;
+      margin-top: 7%;
+      display: block;
+    }
+    &__image{
+      //display: block;
+      //height: 97%;
+      //margin-top: 6%;
+    }
+    &__footer{
+      flex-direction: column-reverse;
+      width: auto;
+      height: 57%;
+    }
+    &__incart{
+      align-self: flex-end;
+    }
+    &__property{
+      display: flex;
+      &-name{
+        color: #666;
+        white-space: nowrap;
+        margin-right: 4px;
+      }
+      &-value{
+        color: #333;
+      }
+    }
+    &__compare{
+      color: #1ab9ce;
+      &::before{
+        content: url(./img/compare_cyan.png);
+      }
+    }
+    &__price-old{
+      white-space: nowrap;
+      @include phones{
+        font-size: 1rem;
+      }
+    }
+    &__price-new{
+      color: #333;
+      white-space: nowrap;
+      @include tablets{
+        font-size: 1.7rem;
+      }
+      @include phones{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+

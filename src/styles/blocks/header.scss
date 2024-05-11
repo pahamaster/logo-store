@@ -1,0 +1,316 @@
+
+.header{
+  background: url("../img/header_bg.jpg") top no-repeat;
+  @include phones{
+    background: url("../img/header_bg.jpg") 0 -8px no-repeat;
+    background-color: white;
+  }
+  position: sticky;
+  top: -10px;
+  z-index: 10;
+  background-color: white;
+}
+
+.menu{
+  font-size: rem(14px);
+  font-family: "Play";
+  @include tablets{
+    display: none;
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: 110px 120px 120px;
+    grid-template-rows: 30px;
+    @include md1{
+      grid-template-columns: 10vw 12vw 12vw;
+    }
+    // @include tablets{
+    //   display: none;
+    // }
+  }
+  &__link{
+    text-decoration: underline;
+    padding: 4px 20px;
+    white-space: nowrap;
+    font-weight: bold;
+    @include md1{
+      padding: 4px 10px;
+    }
+    &:hover{
+      background-color: #068292;
+      border-radius: 16px;
+    }
+  }
+}
+
+.top-header{
+  display: flex;
+  align-items: center;
+  //color: white;
+  justify-content: space-between;
+  &__hamburger{
+    display: none;
+    @include tablets{
+      display: block;
+      flex: 0 1 33.33%;
+    }
+  }
+  &__column{
+    flex: 0 1 50%;
+    @include tablets{
+      flex: 0 1 33.33%;
+    }
+  }
+  &__logo{
+    align-self: flex-start;
+    padding: 10px 0 0 0;
+    flex: 0 0 180px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    @include md1{
+      padding-top: 20px;
+      flex: 0 0 140px;
+    }
+    @include tablets{
+      padding-top: 26px;
+    }
+    @include phones{
+      padding-top: 7px;
+    }
+  }
+  &__phones{
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    // @include tablets{
+    //   flex: 0 0 33.33%;
+    // }
+  }
+}
+
+.logo{
+  user-select: none;
+  //text-decoration: none;
+  &__title{   
+    font-size: rem(48px);
+    font-weight: bold;
+    font-family: "Play";
+  }
+  &__caption{
+    white-space: nowrap;
+  }
+}
+
+.phones-header{
+  display: flex;
+  justify-content: space-around;
+  @include tablets{
+    justify-content: flex-end;
+  }
+  &:hover {
+    filter: invert(1);
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+    //text-decoration: none;
+    justify-content: space-evenly;
+  }
+  &__phone-icon{
+    width: 19px;
+    height: 25px;
+    margin-right: rem(5px);
+    // @include tablets{
+    //   margin-right: 10px;
+    // }
+  }
+  &__line{
+    width: 1px;
+    height: 30px;
+    border-left: 1px solid white;
+    margin: 0 rem(5px);
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    @include phones{
+      display: none;
+    }
+  }
+  &__item--mod{
+    flex: 0 0 50%;
+    @include tablets{
+      flex: 0 0 80%;
+    }
+    @include phones{
+      flex: 0 0 auto;
+    }
+  }
+  &__phone{
+    font-size: rem(18px);
+    font-weight: 900;
+  }
+  &__item--right{
+    margin-right: 9%;
+    @include md1{
+      margin-right: 0;
+    }
+    @include tablets{
+      display: none;
+    }
+  }
+}
+
+.actions-header{
+  text-decoration: underline;
+  flex: 0 1 440px;
+  @include md1{
+    flex: 0 1 380px;
+  }
+  @include tablets{
+    flex: 0 1 360px;
+  }
+  &__list{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__item{
+    :hover{
+      filter: brightness(0);
+      @include phones{
+        filter: brightness(1);
+      }
+    }
+  }
+}
+
+.bottom-header{
+  display: flex;
+  align-items: center;
+  height: 65px;
+  justify-content: space-between;
+  @include phones{
+    span {
+      display: none;
+    }
+  }
+  &__link{
+    font-size: rem(14px);
+    display: flex;
+    align-items: center;
+    color: #1ab9ce;
+    position: relative;
+    :hover{
+      color: black;
+    }
+  }
+  &__icon{
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: rem(12px);
+    :hover{
+      filter: brightness(0);
+    }
+    @include md1{
+      margin-right: 1vw;
+    }
+    @include tablets{
+      margin-right: 0.5vw;
+    }
+    @include phones{
+      &:hover::after {
+        //filter: brightness(10);
+        content: attr(data-title); /* Выводим текст */
+        position: absolute; /* Абсолютное позиционирование */
+        left: -50%; top: 30%; /* Положение подсказки */
+        z-index: 1; /* Отображаем подсказку поверх других элементов */
+        background: rgba(26,185,206,0.8); /* Полупрозрачный цвет фона */
+        //font-family: Arial, sans-serif; /* Гарнитура шрифта */
+        font-size: 12px; /* Размер текста подсказки */
+        padding: 5px 5px; /* Поля */
+        border: 1px solid #333; /* Параметры рамки */
+        color: white;
+        border-radius: 6px;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__column{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0 1 479px;
+    // :hover{
+    //   filter: brightness(0);
+    //   @include phones{
+    //     filter: brightness(1);
+    //   }
+    // }
+    @include md1{
+      flex: 0 1 380px;
+    }
+    @include tablets{
+      flex: 0 1 200px;
+    }
+  }
+  // &__callback{
+  //   :hover{
+  //     filter: brightness(0);
+  //     @include phones{
+  //       filter: brightness(1);
+  //     }
+  //   }
+  // }
+}
+
+.office-hours{
+  display: flex;
+  align-items: center;
+  @include tablets{
+    display: none;
+  }
+  &__container{
+    display: flex;
+    flex-direction: column;
+    color: #999999;
+  }
+}
+
+.cart{
+  margin-right: 5%;
+  @include md1{
+    margin-right: 0;
+  }
+  position: relative;
+  &__mumber-goods{
+    top: -10%;
+    left: 70%;
+    //width: 40px;
+    padding: 0 6px;
+    //height: 25px;
+    border-radius: 10px;
+    background-color: #f68038;
+    font-size: rem(18px);
+    font-weight: bold;
+    //color: white;
+    position: absolute;
+    text-align: center;
+    //vertical-align: middle;
+    @include tablets{
+      left: 50%;
+    }
+  }
+}
+
+.link-header{
+  &__signin{
+    color: #999999;
+  }
+  &__callback{
+    text-decoration: underline;
+  }
+}

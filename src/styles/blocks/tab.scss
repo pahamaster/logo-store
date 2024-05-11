@@ -1,0 +1,37 @@
+.tab{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 rem(30px);
+  @include md1{
+    padding: 0 rem(20px);
+  }
+  @include tablets{
+    padding: 0 rem(10px);
+  }
+  height: rem(50px);
+  color: #72c9d4;
+  //white-space: nowrap;
+  font-size: rem(14px);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  user-select: none;
+  cursor: pointer;
+  &.--active{
+    cursor: default;
+    color: white;
+    text-decoration: none;
+    background-color: #72c9d4;
+  }
+  &-nav{
+    display: flex;
+  }
+  &-item{
+    display: none;
+    &.--active{
+      display: block;
+    }
+  }
+}

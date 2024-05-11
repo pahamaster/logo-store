@@ -1,0 +1,54 @@
+{
+  "name": "logo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "cross-env NODE_ENV=dev gulp",
+    "build": "cross-env NODE_ENV=prod gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pahamaster/logo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pahamaster/logo/issues"
+  },
+  "homepage": "https://github.com/pahamaster/logo#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-smile-px2rem": "^0.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "bxslider": "^4.2.14",
+    "jquery": "^3.5.1",
+    "jquery-touchswipe": "^1.6.19",
+    "mobile-detect": "^1.4.4",
+    "normalize.css": "^8.0.1"
+  }
+}

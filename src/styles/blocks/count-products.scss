@@ -1,0 +1,46 @@
+.count-products{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // flex: 0 1 27%;
+  // margin-left: -26%;
+  // @include md1{
+  //   margin: 0;
+  // }
+  &__icon{
+    vertical-align: middle;
+    display: inline-block;
+    height: 20px;
+    width: 23px;
+    stroke: #e6e6e6;
+    cursor: default;
+    stroke-width: 5;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    &_right{
+      transform: rotate(180deg);
+    }
+  }
+  &__arrow.--active{
+    >svg{
+      stroke: #009cb0;
+      cursor: pointer;
+    }
+    &:hover>svg{
+      stroke: #fd8424;
+    }
+  }
+  &__label{
+    //margin: 0 rem(12px);
+    height: rem(33px);
+    width: rem(56px);
+    border: 2px solid #e5e5e5;
+    color: #999;
+    font-size: rem(16px);
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

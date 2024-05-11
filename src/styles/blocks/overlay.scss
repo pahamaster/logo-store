@@ -1,0 +1,58 @@
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.overlay__close-btn{
+  position: fixed;
+  top: 5vh;
+  left: 90vw;
+  width: rem(28px);
+  height: rem(28px);
+  @include phones{
+    left: 85vw;
+  }
+}
+
+.overlay__close-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: rem(26px);
+  width: rem(26px);
+  fill: #c2c2c3;
+}
+
+.overlay__menu{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay__menu-list{
+  color: #4da0b9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 32px;
+  white-space: nowrap;
+}
+
+.overlay__menu-item{
+  margin-bottom: 4vh;
+}
+
+.overlay__menu-link{
+  //text-decoration: none;
+}

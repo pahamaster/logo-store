@@ -1,0 +1,78 @@
+.select{
+  position: relative;
+  border: 2px solid #f3f3f3;
+  width: rem(170px);
+  @include phones{
+    width: rem(140px);
+  }
+  &__list{
+    position: relative;
+  }
+  &__item{
+    color: #0097ac;
+    display: flex;
+    align-items: center;
+    //width: rem(170px);
+    //width: 100%;
+    //height: rem(30px);
+    height: 0;
+    transition: height .5s;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    // @include phones{
+    //   width: rem(140px);
+    // }
+    &.--active{
+      //display: flex;
+      height: rem(30px);
+      //background: white url(./img/arrow_select.png) top 50% right rem(8px) no-repeat;
+      &::before{
+        position: absolute;
+        content: url(./img/arrow_select.png);
+        top: 50%;
+        transition: transform .5s;
+        transform: translateY(-50%);
+        right: rem(5px);
+      }
+    }
+    span{ 
+      margin-left: rem(13px);
+      @include phones{
+        margin-left: rem(7px);
+      }
+    }
+  }
+  &__list_main.--open .--active::before{
+    transform: translateY(-50%) rotate(-180deg);
+  }
+  &__list_main.--open+ul li{
+    height: rem(30px);
+  }
+  &__list_drop{
+    position: absolute;
+    // border: 2px solid #f3f3f3;
+    width: calc(100% + 4px);
+    z-index: 4;
+    top: 100%;
+    left: -2px;
+    & li{
+      display: flex;
+      &:hover{
+        background-color: #71c7d3;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.select-paggin{
+  width: rem(55px);
+  & li{
+    font-size: rem(16px);
+    font-weight: 900;
+    color: #999999;
+    //width: rem(55px);
+  }
+}
+

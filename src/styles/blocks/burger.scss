@@ -1,0 +1,25 @@
+.burger{
+  width: 36px;
+  height: 36px;
+  background-color: #068292;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: center;
+  display: flex;
+  &__plank{
+    display: block;
+    background-color: white;
+
+    height: 2px;
+    width: 24px;
+    margin-top: 5px;
+    &:first-child{
+      margin-top: 10px;
+    }
+  }
+  &:hover {
+    .burger__plank{
+      background-color: #f3f3f3;
+    }
+  }
+}
